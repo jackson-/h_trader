@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block header %}
+{% if errors %}
+	{{errors}}
+{% endif %}
+<h1>Registration</h1>
+	<form action='/users/register/' method='POST'>
+	{{form.as_p}}
+	{% csrf_token %}
+	<input type='submit' value='Submit'>
+	</form>
+{% endblock %}

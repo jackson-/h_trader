@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block header %}
+<h1>This is history trader!</h1>
+{% if user.is_anonymous %}
+	<form action='login/' method='POST'>
+	{{form.as_p}}
+	{% csrf_token %}
+	<input type='submit' value='Submit'>
+	</form>
+	<a href="signup/">Register</a>
+{% else %}
+	<h2>Welcome {{user}}</h2>
+{% endif %}
+{% endblock %}
