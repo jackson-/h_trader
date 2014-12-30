@@ -1,6 +1,9 @@
 {% extends 'base.html' %}
+{% block header %}
+<a href = "/game/portfolio/">Portfolio Manager</a>
+{% endblock %}
 {% block content %}
-	<h1>Round {{reques.session.round}}</h1>
+	<h1>Round {{request.session.round}}</h1>
 	<table>
 		<tr>
 			<th>
