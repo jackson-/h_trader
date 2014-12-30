@@ -4,6 +4,7 @@ from game.views import *
 
 urlpatterns = patterns('',
     # Examples:
+    url(r'^round/$', RoundView.as_view(), name='round'),
     url(r'^create/$', CreateView.as_view(), name='create'),
     url(r'^$', StartView.as_view(), name='start'),
 )

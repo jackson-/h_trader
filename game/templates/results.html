@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block content %}
+	<h1>Results</h1>
+	<h3>Profit: {{profit}}</h4>
+	<h3>Stocks Owned</h3>
+	{% for stock in stocks %}
+		<li>{{stock.ticker}}</li>
+		<li>{{stock.price}}</li>
+		<li>{{stock.date}}</li>
+	{% endfor %}
+
+{% endblock %}

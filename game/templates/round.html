@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% block content %}
+	<h1>Round {{reques.session.round}}</h1>
+	<table>
+		<tr>
+			<th>
+			Ticker
+			</th>
+			<th>
+			Price
+			</th>
+			<th>
+			Date
+			</th>
+		</tr>
+		{% for stock in stocks %}
+		<tr>
+			<td>
+				{{stock.ticker}}
+			</td>
+			<td>
+				{{stock.price}}
+			</td>
+			<td>
+				{{stock.date}}
+			</td>
+		</tr>
+		{% endfor %}
+	</table>
+{% endblock %}
